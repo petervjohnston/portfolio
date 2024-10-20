@@ -4,60 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Johnston - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="py-4">
             <h1>Peter Johnston</h1>
             <p>Paintings (oil on canvas)</p>
         </header>
         
         <nav>
-            <ul class="tabs">
-                <li><a href="#abstract-landscapes" class="active">Abstract Landscapes</a></li>
-                <li><a href="#drugs">Drugs</a></li>
-                <li><a href="#pigments">Pigments</a></li>
-                <li><a href="#other-work">Other Work</a></li>
+            <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="abstract-landscapes-tab" data-bs-toggle="tab" data-bs-target="#abstract-landscapes" type="button" role="tab" aria-controls="abstract-landscapes" aria-selected="false">Abstract Landscapes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="drugs-tab" data-bs-toggle="tab" data-bs-target="#drugs" type="button" role="tab" aria-controls="drugs" aria-selected="false">Drugs</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pigments-tab" data-bs-toggle="tab" data-bs-target="#pigments" type="button" role="tab" aria-controls="pigments" aria-selected="false">Pigments</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="other-work-tab" data-bs-toggle="tab" data-bs-target="#other-work" type="button" role="tab" aria-controls="other-work" aria-selected="false">Other Work</button>
+                </li>
             </ul>
         </nav>
         
         <main>
-            <section id="abstract-landscapes" class="tab-content active">
-                <h2>Abstract Landscapes</h2>
-                <!-- Add your content for Abstract Landscapes here -->
-            </section>
-            
-            <section id="drugs" class="tab-content">
-                <h2>Drugs</h2>
-                <!-- Add your content for Drugs here -->
-            </section>
-            
-            <section id="pigments" class="tab-content">
-                <h2>Pigments</h2>
-                <!-- Add your content for Pigments here -->
-            </section>
-            
-            <section id="other-work" class="tab-content">
-                <h2>Other Work</h2>
-                <!-- Add your content for Other Work here -->
-            </section>
-
-            <section id="contact">
-                <h2>Contact Information</h2>
-                <ul>
-                    <li>Email: petervjohnston@gmail.com</li>
-                    <li>Phone: (206) 532-6395</li>
-                    <li>Phone: (206) 941-7989</li>
-                    <li>Location: Seattle/CID, WA</li>
-                </ul>
-            </section>
+            <div class="tab-content" id="portfolioTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <section id="contact" class="mt-4">
+                        <h2>Contact Information</h2>
+                        <ul class="list-unstyled">
+                            <li>Email: petervjohnston@gmail.com</li>
+                            <li>Phone: (206) 532-6395</li>
+                            <li>Phone: (206) 941-7989</li>
+                            <li>Location: Seattle/CID, WA</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="tab-pane fade" id="abstract-landscapes" role="tabpanel" aria-labelledby="abstract-landscapes-tab">
+                    <h2 class="mt-4">Abstract Landscapes</h2>
+                    <div class="image-gallery" data-category="Abstract Landscapes"></div>
+                </div>
+                <div class="tab-pane fade" id="drugs" role="tabpanel" aria-labelledby="drugs-tab">
+                    <h2 class="mt-4">Drugs</h2>
+                    <div class="image-gallery" data-category="Drugs"></div>
+                </div>
+                <div class="tab-pane fade" id="pigments" role="tabpanel" aria-labelledby="pigments-tab">
+                    <h2 class="mt-4">Pigments</h2>
+                    <div class="image-gallery" data-category="Pigments"></div>
+                </div>
+                <div class="tab-pane fade" id="other-work" role="tabpanel" aria-labelledby="other-work-tab">
+                    <h2 class="mt-4">Other Work</h2>
+                    <div class="image-gallery" data-category="Other Work"></div>
+                </div>
+            </div>
         </main>
         
-        <footer>
+        <footer class="mt-4">
             <p>© 2024 Peter Johnston | Thriving in a world of perpetual rain</p>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
