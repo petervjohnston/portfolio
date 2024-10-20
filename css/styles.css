@@ -9,6 +9,66 @@
     --footer-color: #34495e;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color-1: #1c1c1c;
+    --bg-color-2: #2c2c2c;
+    --text-color: #e0e0e0;
+    --accent-color: #4a6670;
+    --header-color: #2c3e50;
+    --footer-color: #34495e;
+    --tab-active-color: #4a6670;
+    --tab-hover-color: #3a5560;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+.tabs {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color-2);
+    border-radius: 5px 5px 0 0;
+}
+
+.tabs li {
+    flex: 1;
+}
+
+.tabs a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.tabs a:hover {
+    background-color: var(--tab-hover-color);
+}
+
+.tabs a.active {
+    background-color: var(--tab-active-color);
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
